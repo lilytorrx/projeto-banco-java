@@ -3,11 +3,13 @@ public abstract class Conta implements ContaInterface {
     private int numeroConta;
     private double saldo;
     private static int agenciaPadrao = 1; 
-    private static int sequencial = 0;
+    private static int sequencial = 1;
+    protected Cliente cliente;
 
-    public Conta() {
+    public Conta(Cliente cliente) {
         this.agencia = agenciaPadrao;
         this.numeroConta = sequencial++;
+        this.cliente = cliente;
     }
 
     public int getAgencia() {
@@ -41,6 +43,7 @@ public abstract class Conta implements ContaInterface {
     protected void imprimirInfoComuns() {
         System.out.println("Agência: " + getAgencia());
         System.out.println("Número da Conta: " + getNumeroConta());
-        System.out.println("Saldo: " + getSaldo());
+        System.out.println("Saldo: R$" + getSaldo());
+        System.out.println("Titular: " + this.cliente.getNome());
     }
 }
