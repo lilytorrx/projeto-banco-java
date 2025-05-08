@@ -1,18 +1,3 @@
-public class ContaCorrente {
-    private int agencia;
-    private int numeroConta;
-    private double saldo;
-
+public class ContaCorrente extends Conta{
     
-    public void sacar() {
-
-    }
-
-    public void depositar() {
-        
-    }
-
-    public void transferir() {
-
-    }
 }
