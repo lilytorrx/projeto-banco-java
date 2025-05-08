@@ -3,6 +3,7 @@ public class ContaCorrente {
     private int numeroConta;
     private double saldo;
 
+    
     public void sacar() {
 
     }
@@ -12,6 +13,6 @@ public class ContaCorrente {
     }
 
     public void transferir() {
-        
+
     }
 }
